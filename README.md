@@ -1,6 +1,6 @@
 # Trading Bot – Binance Futures Testnet
 
-A Python CLI tool to place **MARKET** and **LIMIT** orders on [Binance Futures Testnet](https://testnet.binancefuture.com/) (USDT-M perpetual contracts).
+A Python CLI + Streamlit dashboard to place **MARKET** and **LIMIT** orders on [Binance Futures Testnet](https://testnet.binancefuture.com/) (USDT-M perpetual contracts).
 
 ## Project Structure
 
@@ -15,7 +15,9 @@ trading-bot/
 ├── logs/
 │   ├── market_order.log     # Sample MARKET order log
 │   └── limit_order.log      # Sample LIMIT order log
+├── app.py                   # Streamlit dashboard (bonus UI)
 ├── cli.py                   # CLI entry point (argparse)
+├── test_all.py              # Comprehensive test suite (91 tests)
 ├── requirements.txt         # Python dependencies
 ├── .env.example             # Template for API credentials
 └── README.md                # This file
@@ -32,7 +34,7 @@ trading-bot/
 ### 2. Clone this repository
 
 ```bash
-git clone https://github.com/<your-username>/trading-bot.git
+git clone https://github.com/That-Tech-Geek/trading-bot.git
 cd trading-bot
 ```
 
@@ -57,7 +59,7 @@ BINANCE_TESTNET_API_KEY=your_api_key_here
 BINANCE_TESTNET_SECRET_KEY=your_secret_key_here
 ```
 
-## Usage
+## Usage – CLI
 
 ### Place a MARKET order
 
@@ -102,6 +104,23 @@ Avg Price     : 49850.25
 SUCCESS: Order placed successfully.
 ```
 
+## Usage – Streamlit Dashboard (Bonus UI)
+
+Launch the interactive web dashboard:
+
+```bash
+streamlit run app.py
+```
+
+The dashboard provides:
+
+- **Live connection** to Binance Futures Testnet (enter API keys in the sidebar)
+- **Order form** with real-time preview (symbol, side, type, quantity, price)
+- **Response metrics** — Order ID, status, executed qty, average price
+- **Order history** — scrollable log of all orders placed in the session
+- **Session stats** — total / filled / failed counters
+- **Dark glassmorphism UI** with smooth animations
+
 ## Logging
 
 All API requests, responses, and errors are logged to `logs/trading_bot.log`.
@@ -136,7 +155,8 @@ All errors are logged to the log file and displayed to the user with a clear `FA
 
 ## Libraries Used
 
-| Library        | Version   | Purpose                  |
-| -------------- | --------- | ------------------------ |
-| `requests`     | ≥2.32.4   | HTTP client for REST API |
-| `python-dotenv`| 1.2.2     | Load `.env` credentials  |
+| Library        | Version   | Purpose                         |
+| -------------- | --------- | ------------------------------- |
+| `requests`     | ≥2.32.4   | HTTP client for REST API        |
+| `python-dotenv`| ≥1.0.0    | Load `.env` credentials         |
+| `streamlit`    | ≥1.45.0   | Interactive web dashboard (bonus)|
