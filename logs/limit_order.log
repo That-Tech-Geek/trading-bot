@@ -1,0 +1,3 @@
+2025-02-20 10:20:45,678 - bot.orders - INFO - Placing LIMIT SELL order for 0.001 BTCUSDT @ 50000.0
+2025-02-20 10:20:45,999 - bot.client - DEBUG - Request: POST https://testnet.binancefuture.com/fapi/v1/order | Params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 50000, 'timeInForce': 'GTC', 'newOrderRespType': 'RESULT', 'timestamp': 1740054045999, 'recvWindow': 5000, 'signature': 'def456...'} | Status: 200
+2025-02-20 10:20:46,000 - bot.orders - INFO - Order placed successfully. Order ID: 987654322

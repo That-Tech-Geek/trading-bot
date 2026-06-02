@@ -1,0 +1,18 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Logs (keep samples, ignore runtime log)
+logs/trading_bot.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,3 @@
+2025-02-20 10:15:23,123 - bot.orders - INFO - Placing MARKET BUY order for 0.001 BTCUSDT
+2025-02-20 10:15:23,456 - bot.client - DEBUG - Request: POST https://testnet.binancefuture.com/fapi/v1/order | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'newOrderRespType': 'RESULT', 'timestamp': 1740053723456, 'recvWindow': 5000, 'signature': 'abc123...'} | Status: 200
+2025-02-20 10:15:23,457 - bot.orders - INFO - Order placed successfully. Order ID: 987654321
